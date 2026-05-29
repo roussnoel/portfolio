@@ -133,14 +133,15 @@ a {
 .project-panel::before {
   content: "";
   position: absolute;
-  inset: 0;
+  inset: -34px;
   z-index: -3;
   background:
-    linear-gradient(90deg, rgba(0, 0, 0, 0.88) 0%, rgba(0, 0, 0, 0.58) 42%, rgba(0, 0, 0, 0.82) 100%),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.88) 0%, rgba(0, 0, 0, 0.48) 48%, rgba(0, 0, 0, 0.86) 100%),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.84)),
     var(--project-image) center / cover no-repeat;
-  filter: blur(18px) saturate(1.18);
-  opacity: calc(0.22 + (var(--focus, 0) * 0.18));
-  transform: scale(1.08);
+  filter: blur(32px) saturate(1.3) brightness(0.9);
+  opacity: calc(0.36 + (var(--focus, 0) * 0.24));
+  transform: scale(1.14);
 }
 
 .project-panel::after {
@@ -323,6 +324,14 @@ a {
   width: 100%;
   height: 100%;
   border: 0;
+}
+
+.video-frame img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .project-meta {
